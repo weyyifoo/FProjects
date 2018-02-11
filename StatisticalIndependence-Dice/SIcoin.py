@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Sat Feb 10 18:54:40 2018
+
+@author: Wey Yi
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Sat Feb 10 14:33:58 2018
 
 @author: Wey Yi
@@ -13,14 +20,14 @@ import time
 start = time.time()
 result = []
 
-d = 6000000
+d = 2000000
 for i in range(d):
-    result.append(random.randint(1, 6))
+    result.append(random.randint(1, 2))
 
 k = []
 
-for m in range(1,7):
-    for n in range(1, 7):
+for m in range(1,3):
+    for n in range(1, 3):
         count = 0
         for p in range(0, d-1):    
             if result[p] == m and result[p + 1] == n:
@@ -29,7 +36,7 @@ for m in range(1,7):
 
 # count the number of occurences for possibilities 1 through 6
 countocc = []
-for a in range(1,7):
+for a in range(1,3):
     q = result.count(a)
     countocc.append(q)
 
@@ -42,7 +49,7 @@ def chunks(l, n):
  
 # How many elements each
 # list should have
-n = 6
+n = 2
  
 x = list(chunks(k, n))
 x_array = np.asarray(x)
